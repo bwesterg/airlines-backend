@@ -13,7 +13,7 @@ class AirlinesController < ApplicationController
     end
 
     def update 
-        # @airline = Airline.find(params[:id])
+#   need top level key on front end if using strong params
         @airline.update(airline_params)
         render json: @airline
     end
