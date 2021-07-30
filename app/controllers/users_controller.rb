@@ -11,11 +11,16 @@ class UsersController < ApplicationController
             render json: {errors: @user.errors.full_messages}, status: :not_acceptable
         end
     end
+
+    def index
+        @users = User.all 
+        render json: @users
+    end
     
     private
 
     def user_params
-        params.require(:user).permit(:username, :password, :email)
+        params.require(:user).permit(:username, :password)
     end
 end
 
