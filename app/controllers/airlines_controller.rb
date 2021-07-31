@@ -1,7 +1,6 @@
 class AirlinesController < ApplicationController
 
     before_action :find_airline, only: [:update, :destroy]
-
     def index
         @airlines = Airline.all 
         render json: @airlines
