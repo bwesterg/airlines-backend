@@ -1,6 +1,8 @@
 class AirlinesController < ApplicationController
 
-    before_action :find_airline, only: [:update, :destroy]
+    before_action :find_airline, only: [:destroy, :update]
+
+    # before_action :find_airline, only: [:update, :destroy]
     def index
         @airlines = Airline.all 
         render json: @airlines
@@ -12,7 +14,7 @@ class AirlinesController < ApplicationController
     end
 
     def update 
-#   need top level key on front end if using strong params
+    #   need top level key on front end if using strong params
         @airline.update(airline_params)
         render json: @airline
     end
