@@ -5,7 +5,7 @@ Airline.create([
     {
         name: "American Airlines", 
         image: "https://logodownload.org/wp-content/uploads/2020/03/american-airlines-logo-1.png",
-        review: "Long time on hold",
+        review: "Long time on hold, theylost my baggage, and added 13 hour layover.  But they're 'sorry' for the inconvenience.",
         rating: 5,
         high_marks: false,
     },
